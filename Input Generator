@@ -1,0 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+using namespace std;
+
+
+int main(){
+    int r;
+    r = (rand() % 7) + 1;
+    int count = 0;
+    vector <string> prod(11);
+    prod[0] = "VVSA";
+    prod[1] = "DSAA";
+    prod[2] = "ADFD";
+    prod[3] = "XWWX";
+    prod[4] = "FDSF";
+    prod[5] = "AAAA";
+    prod[6] = "FDDF";
+    prod[7] = "RABA";
+    prod[8] = "BAAB";
+    prod[9] = "JLQR";
+    prod[10] = "GKSS";
+
+    string s = "poner_prod ";
+    for(int i = 0; i< 11; ++i){
+      cout <<s <<prod[i]<<endl;
+    }
+
+    while(count != 1000){
+      if(r == 1){
+        int x =  (rand() % 11);
+        cout<<"quitar_prod "<<prod[x]<<endl;
+      }
+      else if(r == 2){
+        int sala= (rand() % 401) + 1;
+        int x =  (rand() % 11) ;
+        int y = (rand() % 100000) + 50000;
+        cout<<"poner_items "<< sala<<" "<<prod[x]<<" "<<y<<endl;
+      }
+      else if( r == 3){
+        int sala= (rand() % 401) + 1;
+        int x =  (rand() % 11) ;
+        int y = (rand() % 100000) + 50000;
+        cout<<"quitar_items "<< sala<<" "<<prod[x]<<" "<<y<<endl;
+      }
+      else if( r == 4){
+        int x =  (rand() % 11) ;
+        int y = (rand() % 100000) + 50000;
+        cout <<"distribuir "<<prod[x]<<" "<<y<<endl;
+      }
+      else if(r == 5){
+        int sala= (rand() % 401) + 1;
+        cout<<"compactar "<<sala<<endl;
+      }
+      else if(r == 6){
+        int sala= (rand() % 401) + 1;
+        int x =  (rand() % 200) +100 ;
+        int y = (rand() % 200) + 100;
+        cout <<"redimensionar " <<sala<<" "<<x<<" "<<y<<endl;
+      }
+      else if(r == 7){
+        cout <<"inventario"<<endl;
+      }
+      ++count;
+      r = (rand() % 7) + 1;
+  }}
