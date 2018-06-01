@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+using namespace  std;
+
+
+int main(){
+  vector <bool> v(401, false);
+  int count = 0;
+  int r;
+  int aux = 0;
+  r = (rand() % 401) + 1;
+  cout << r;
+  ++count;
+  ++aux;
+  v[r-1] = true;
+  while( count != 401){
+     r = (rand() % 401) + 1;
+     if(not v[r-1]){
+       cout<<" "<<r;
+       ++count;
+       v[r-1] = true;
+       ++aux;
+       if(aux == 2){
+         cout <<" "<<0<<" "<<0;
+         aux = 0;
+       }
+     }
+  }
+  cout<<endl;
+}
