@@ -1,4 +1,4 @@
 # PRACTICA-PRO2
-Pràctica TreeKEA
+Programming Activity: TreeKEA
 
-Pràctica PRO2 de la FIB del quadrimestre primavera 2017-2018
+Programming activity of the subject PRO2 of FIB in spring season 2017-2018
